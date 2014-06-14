@@ -34,7 +34,7 @@
 
     <!--フッター-->
     <footer>
-      <p>&copy; TeamA 2014 TOKYO HACKATHON</p>
+      <?php include_once("../_parts/footer.html"); ?>
     </footer>
 
     <!-- Modal -->
@@ -150,6 +150,10 @@
       }
       if (!w) {
         showModal('警告', '<p>アップロードする画像を範囲選択してください。</p>');
+        return false;
+      }
+      if (w != h) {
+        showModal('警告', '<p>アップロードする画像は正方形で範囲選択してください。</p>');
         return false;
       }
       $canvas.attr({width: w, height: h});

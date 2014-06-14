@@ -70,7 +70,7 @@
 
     <!--フッター-->
     <footer>
-      <p>&copy; TeamA 2014 TOKYO HACKATHON</p>
+      <?php include_once("../_parts/footer.html"); ?>
     </footer>
   </div>
 
@@ -82,7 +82,7 @@
       var i;
       for(i in json) {
         $('#gallery a').eq(i).attr({'href': json[i].Animation.Url});
-        $('#gallery img').eq(i).attr({'src': json[i].Url});
+        $('#gallery img').eq(i).attr({'src': 'gallery/?id' + json[i].Id});
       }
     };
     $('#side-nav li').eq(1).attr({'class': 'active'});

@@ -18,24 +18,36 @@
       <?php include_once("../_parts/side_nav.html"); ?>
 
       <!--メイン-->
-      <div class="col-md-8">
-
-      </div>
+      <div class="col-md-8"></div>
     </div>
 
     <hr>
 
     <!--フッター-->
     <footer>
-      <p>&copy; TeamA 2014 TOKYO HACKATHON</p>
-    </footer>
+      <?php include_once("../_parts/footer.html"); ?></footer>
   </div>
 
   <?php include_once("../_parts/script.html"); ?>
+  <script src="js/querystring.js"></script>
   <script>
   $(function () {
+    /*if (!query.id) {
+      location.href = 'new/';
+    }*/
+
     $('#side-nav li').eq(3).attr({'class': 'active'});
+
+    /*$.ajax({
+      async: true,
+      url: '//tokyo-animation.azurewebsites.net/api/animations/' + query['id'],
+      type: 'GET',
+      dataType: 'json'
+    }).done(function (json) {
+      getGallery(json.Pictures);
+    }).fail(function () {
+    }).always(function () {
+    });*/
   });
-  </script>
-</body>
+  </script></body>
 </html>

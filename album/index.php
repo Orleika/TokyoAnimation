@@ -70,7 +70,7 @@
 
     <!--フッター-->
     <footer>
-      <p>&copy; TeamA 2014 TOKYO HACKATHON</p>
+      <?php include_once("../_parts/footer.html"); ?>
     </footer>
   </div>
 
