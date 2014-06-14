@@ -10,17 +10,17 @@
   <header></header>
   <main>
     <div id="image-form"><img id="up-image" src="img/no.png" alt="no image"></div>
-    <form id="up-form">
+    <div id="up-form">
       <input type="file" name="upimage" size="30">
-      <canvas id="up-canvas" width="500" height="500"></canvas>
+      <canvas id="up-canvas"></canvas>
       <input id="up-submit" type="submit" value="submit">
-    </form>
+    </div>
   </main>
   <footer></footer>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="js/jquery.Jcrop.min.js"></script>
   <script>
-  $(function(){
+  $(function (){
     var $upForm = $('#up-form'),
       $canvas = $('#up-canvas'),
       x, y, w, h, blob,
@@ -28,7 +28,7 @@
         var $img = $('#up-image'),
           img = $img[0],
           ctx = $canvas[0].getContext('2d');
-          ctx.drawImage(img, 0, 0);
+          ctx.drawImage(img, x, y, w, h, 0, 0, w, h);
       },
       convertImage = function () {
         var canvas = $canvas[0].toDataURL(),
@@ -55,7 +55,6 @@
           marginTop: '-' + Math.round(ry * coords.y) + 'px'
         });
       };
-    //$img.load(drawCanvas);
 
     $('input[type=file]').change(function() {
       var file = $(this).prop('files')[0],
@@ -80,32 +79,23 @@
 
     $('#up-submit').click(function () {
       var fd = new FormData();
+      $canvas.attr({width: w, height: h});
       drawCanvas();
       convertImage();
       fd.append('path', blob);
-      fd.append('longitude', "longitude");
-      fd.append('latitude', "latitude");
-
+      fd.append('longitude', 0);
+      fd.append('latitude', 0);
       $.ajax({
         async: true,
-        beforeSend: function(xhr) {
-          xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
-        },
-        xhr: function () {
-          var XHR = $.ajaxSettings.xhr();
-          if (XHR.upload) {
-              XHR.upload.addEventListener('progress', function (e) {
-              }, false);
-          }
-          return XHR;
-        },
         url: '//tokyo-animation.azurewebsites.net/api/pictures',
         type: 'POST',
         processData: false,
         contentType: false,
         data: fd
       }).done(function () {
+        alert("success");
       }).fail(function () {
+        alert("fail");
       }).always(function () {
       });
     });

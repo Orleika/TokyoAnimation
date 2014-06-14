@@ -9,13 +9,10 @@
   <header>
     <h1>Tokyo Animation</h1>
   </header>
+  <nav>
+    <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook-japan.com%2F&layout=button_count&show_faces=false&width=100&action=like&colorscheme=light&height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+  </nav>
   <main>
-    <div id="image-form"><img id="up-image" src="img/no.png" alt="no image"></div>
-    <form id="up-form">
-      <input type="file" name="upimage" size="30">
-      <canvas id="up-canvas" width="500" height="500"></canvas>
-      <input id="up-submit" type="submit" value="submit">
-    </form>
   </main>
   <footer></footer>
   <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
