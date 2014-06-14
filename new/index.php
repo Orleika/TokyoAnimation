@@ -1,60 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <base href="//localhost/tokyo/">
-  <link rel="stylesheet" href="css/style.css">
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-  <title>TOKYO ANIMATION</title>
+  <?php include_once("../_parts/head.html"); ?>
+  <title>トップページ | TOKYO ANIMATION</title>
 </head>
 <body>
   <!--固定型ヘッダー-->
-  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">TOKYO ANIMATION</a>
-      </div>
-      <div class="navbar-collapse collapse">
-        <form class="navbar-form navbar-right" role="form">
-          <button type="submit" class="btn btn-success">ログアウト</button>
-        </form>
-      </div>
-    </div>
-  </div>
+  <?php include_once("../_parts/head_nav.html"); ?>
 
   <!--大見出し-->
-  <div class="jumbotron">
-    <div class="container">
-      <h1>TOKYO ANIMATION</h1>
-      <p>未来にのこそう、私の東京</p>
-    </div>
-  </div>
+  <?php include_once("../_parts/header.html"); ?>
 
   <!--コンテンツ-->
   <div class="container">
     <div class="raw">
       <!--ナビゲーション-->
-      <div class="col-md-4">
-        <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
-          <li class="active">
-            <a href="#">トップページ</a>
-          </li>
-          <li>
-            <a href="#">近くを探す</a>
-          </li>
-          <li>
-            <a href="#">アルバム</a>
-          </li>
-          <li>
-            <a hreF="#">設定</a>
-          </li>
-        </ul>
-      </div>
+      <?php include_once("../_parts/side_nav.html"); ?>
 
       <!--サムネイルサンプル-->
       <div id="gallery" class="col-md-8">
@@ -113,8 +74,7 @@
     </footer>
   </div>
 
-  <script src="//code.jquery.com/jquery-latest.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <?php include_once("../_parts/script.html"); ?>
   <script>
   $(function () {
     var getGallery = function (json) {
@@ -124,9 +84,10 @@
         $('#gallery img').eq(i).attr({'src': json[i].Url});
       }
     };
+    $('#side-nav li').eq(0).attr({'class': 'active'});
     $.ajax({
       async: true,
-      url: '//tokyo-animation.azurewebsites.net/api/pictures',
+      url: '//tokyo-animation.azurewebsites.net/api/pictures/new',
       type: 'GET',
       dataType: 'json'
     }).done(function (json) {
