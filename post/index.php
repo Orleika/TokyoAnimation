@@ -1,6 +1,3 @@
-<?php
-
-?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -26,27 +23,25 @@
   $(function(){
     var $upForm = $('#up-form'),
       $canvas = $('#up-canvas'),
-      x, y, w, h,
-      drawCanvas = function (event) {
-        var $img = $(event.target),
+      x, y, w, h, blob,
+      drawCanvas = function () {
+        var $img = $('#up-image'),
           img = $img[0],
           ctx = $canvas[0].getContext('2d');
           ctx.drawImage(img, 0, 0);
-      },/*
+      },
       convertImage = function () {
-        canvas = $('#mycanvas')[0].toDataURL();
-        var base64Data = canvas.split(',')[1],
-        data = window.atob(base64Data),
-        buff = new ArrayBuffer(data.length),
-        arr = new Uint8Array(buff),
-        blob, i, dataLen;
-        canvas = $('#mycanvas')[0].toDataURL();
-      // blobの生成
-      for( i = 0, dataLen = data.length; i < dataLen; i++){
-        arr[i] = data.charCodeAt(i);
-      }
-      blob = new Blob([arr], {type: 'image/png'});
-      },*/
+        var canvas = $canvas[0].toDataURL(),
+          base64Data = canvas.split(',')[1],
+          data = window.atob(base64Data),
+          buff = new ArrayBuffer(data.length),
+          arr = new Uint8Array(buff),
+          i, dataLen;
+        for( i = 0, dataLen = data.length; i < dataLen; i++){
+          arr[i] = data.charCodeAt(i);
+        }
+        blob = new Blob([arr], {type: 'image/png'});
+      },
       updateCoords = function (c) {
         x = c.x; y = c.y; w = c.w; h = c.h;
       },
@@ -83,15 +78,19 @@
       reader.readAsDataURL(file);
     });
 
-    /*$('#up-submit').click(function () {
-      var fd = new FormData(),
-        detail = getFileDetail(file);
-        fd.append('path', file);
-        fd.append('longitude', );
-        fd.append('latitude', );
+    $('#up-submit').click(function () {
+      var fd = new FormData();
+      drawCanvas();
+      convertImage();
+      fd.append('path', blob);
+      fd.append('longitude', "longitude");
+      fd.append('latitude', "latitude");
 
       $.ajax({
         async: true,
+        beforeSend: function(xhr) {
+          xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+        },
         xhr: function () {
           var XHR = $.ajaxSettings.xhr();
           if (XHR.upload) {
@@ -100,7 +99,7 @@
           }
           return XHR;
         },
-        url: '/api/pictures',
+        url: '//tokyo-animation.azurewebsites.net/api/pictures',
         type: 'POST',
         processData: false,
         contentType: false,
@@ -109,7 +108,7 @@
       }).fail(function () {
       }).always(function () {
       });
-    });*/
+    });
   });
   </script>
 </body>
