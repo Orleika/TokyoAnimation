@@ -5,14 +5,14 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <base href="http://localhost/tokyo/">
+  <base href="//localhost/tokyo/">
   <link rel="stylesheet" href="css/jquery.Jcrop.min.css">
   <title></title>
 </head>
 <body>
   <header></header>
   <main>
-    <img id="up-image" src="img/no.png" alt="">
+    <div id="image-form"><img id="up-image" src="img/no.png" alt="no image"></div>
     <form id="up-form">
       <input type="file" name="upimage" size="30">
       <canvas id="up-canvas" width="500" height="500"></canvas>
@@ -26,14 +26,27 @@
   $(function(){
     var $upForm = $('#up-form'),
       $canvas = $('#up-canvas'),
-      $img = $('#up-image'),
       x, y, w, h,
       drawCanvas = function (event) {
         var $img = $(event.target),
           img = $img[0],
           ctx = $canvas[0].getContext('2d');
           ctx.drawImage(img, 0, 0);
-      },
+      },/*
+      convertImage = function () {
+        canvas = $('#mycanvas')[0].toDataURL();
+        var base64Data = canvas.split(',')[1],
+        data = window.atob(base64Data),
+        buff = new ArrayBuffer(data.length),
+        arr = new Uint8Array(buff),
+        blob, i, dataLen;
+        canvas = $('#mycanvas')[0].toDataURL();
+      // blobの生成
+      for( i = 0, dataLen = data.length; i < dataLen; i++){
+        arr[i] = data.charCodeAt(i);
+      }
+      blob = new Blob([arr], {type: 'image/png'});
+      },*/
       updateCoords = function (c) {
         x = c.x; y = c.y; w = c.w; h = c.h;
       },
@@ -48,11 +61,6 @@
         });
       };
     //$img.load(drawCanvas);
-    $img.Jcrop({
-        aspectRatio: 1,
-        onSelect: updateCoords,
-        onChange: showPreview
-    });
 
     $('input[type=file]').change(function() {
       var file = $(this).prop('files')[0],
@@ -61,17 +69,27 @@
         return;
       }
       reader.onload = function() {
-        $img.attr('src', reader.result);
+        $('.jcrop-holder').remove();
+        $('#up-image').unbind();
+        $('#up-image').remove();
+        $('#image-form').append("<img id=\"up-image\" alt=\"upload image\">");
+        $('#up-image').attr('src', reader.result);
+        $('#up-image').Jcrop({
+          aspectRatio: 1,
+          onSelect: updateCoords,
+          onChange: showPreview
+        });
       }
       reader.readAsDataURL(file);
     });
 
-    $('#up-submit').click(function () {
+    /*$('#up-submit').click(function () {
       var fd = new FormData(),
         detail = getFileDetail(file);
         fd.append('path', file);
         fd.append('longitude', );
         fd.append('latitude', );
+
       $.ajax({
         async: true,
         xhr: function () {
@@ -91,7 +109,7 @@
       }).fail(function () {
       }).always(function () {
       });
-    });
+    });*/
   });
   </script>
 </body>
