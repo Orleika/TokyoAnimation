@@ -1,0 +1,266 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fa",
+				"fadeSpeed"
+			],
+			[
+				"de",
+				"delaySpeed"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"Run",
+				"RunCmd"
+			],
+			[
+				"su",
+				"success"
+			],
+			[
+				"Re",
+				"ReturnHeader"
+			],
+			[
+				"G",
+				"GetEscText"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 64.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"intall",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 498.0
+	},
+	"console":
+	{
+		"height": 181.0,
+		"history":
+		[
+			"import urllib2,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib2,os; pf='Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler( ))); open( os.path.join( ipp, pf), 'wb' ).write( urllib2.urlopen( 'http://sublime.wbond.net/' +pf.replace( ' ','%20' )).read()); print( 'Please restart Sublime Text to finish installation') "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/xampp/htdocs/tokyo/TokyoAnimation",
+		"/C/Users/Cheim/Desktop/tes.html",
+		"/C/Users/Cheim/Desktop/jquery.imageloader.js",
+		"/C/Users/Cheim/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Cheim/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/C/temp/autome/member/js/logsv.js",
+		"/C/temp/other/samples/FitText.js-master/jquery.fittext.js",
+		"/C/temp/autome/member/admin/submit.html",
+		"/C/Users/Cheim/Desktop/Coding-Style.html",
+		"/C/Users/Cheim/Desktop/rand.html",
+		"/C/Users/Cheim/Desktop/random.js",
+		"/C/Users/Cheim/Desktop/20140612.txt",
+		"/C/Users/Cheim/Desktop/random",
+		"/C/Users/Cheim/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Cheim/Desktop/tes.php",
+		"/C/Users/Cheim/AppData/Roaming/Sublime Text 3/Packages/User/Emmet.sublime-settings",
+		"/C/Users/Cheim/Desktop/style.css",
+		"/C/Users/Cheim/Desktop/index.html",
+		"/C/Users/Cheim/Desktop/block_inline.html",
+		"/C/Users/Cheim/Desktop/anchor.html",
+		"/C/Users/Cheim/Desktop/style.scss",
+		"/C/temp/autome/member/admin/cgi-bin/cmd.pl",
+		"/C/temp/autome/member/admin/command.html",
+		"/C/temp/autome/member/admin/cgi-bin/cmd.cgi",
+		"/C/temp/autome/member/uploader/cgi-bin/download.cgi",
+		"/C/Users/Cheim/Desktop/cryptico/pgm/index.html",
+		"/C/Users/Cheim/Desktop/cryptico/test.html",
+		"/C/Users/Cheim/Desktop/pgm/index.html",
+		"/C/Users/Cheim/Desktop/cryptico/random.js",
+		"/C/Users/Cheim/Desktop/cryptico/jsbn.js",
+		"/C/Users/Cheim/Desktop/cryptico/hash.js",
+		"/C/Users/Cheim/Desktop/pgm/lib/random.js",
+		"/C/Users/Cheim/Desktop/cryptico/cryptico.js",
+		"/C/Users/Cheim/Desktop/cryptico/aes.js",
+		"/C/Users/Cheim/Desktop/cryptico/api.js",
+		"/C/Users/Cheim/Desktop/cryptico/rsa.js",
+		"/C/temp/mkstTool/index.html",
+		"/C/Users/Cheim/Desktop/submit.html",
+		"/C/Users/Cheim/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Cheim/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 32.0
+	},
+	"find_in_files":
+	{
+		"height": 105.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"4s",
+			"5",
+			",\n",
+			"SeededRandom()",
+			"ARC4",
+			"rng_get_bytes",
+			"rng_get_byte",
+			"rng_get_bytes",
+			"Utf8Encode",
+			"rng_seed_time()",
+			"rng_state",
+			"rng_pool",
+			"rng_state",
+			"hexcase",
+			"5"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 32.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "TokyoAnimation",
+	"replace":
+	{
+		"height": 60.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
