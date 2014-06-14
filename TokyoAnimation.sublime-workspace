@@ -71,6 +71,22 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "gallery/index.php",
+			"settings":
+			{
+				"buffer_size": 3393,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "js/gallery.js",
+			"settings":
+			{
+				"buffer_size": 742,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -81,6 +97,10 @@
 			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
 			],
 			[
 				"in",
@@ -126,17 +146,17 @@
 	},
 	"file_history":
 	[
+		"/C/xampp/htdocs/tokyo/_parts/side_nav.html",
+		"/C/xampp/htdocs/tokyo/album/index.php",
+		"/C/xampp/htdocs/tokyo/near/index.php",
 		"/C/xampp/htdocs/tokyo/js/gallery.js",
 		"/C/xampp/htdocs/tokyo/new/index.php",
-		"/C/xampp/htdocs/tokyo/near/index.php",
-		"/C/xampp/htdocs/tokyo/album/index.php",
 		"/C/xampp/htdocs/tokyo/setting/index.php",
 		"/C/xampp/htdocs/tokyo/gallery/index.php",
 		"/C/xampp/htdocs/tokyo/js/querystring.js",
 		"/C/xampp/htdocs/tokyo/index.php",
 		"/C/xampp/htdocs/tokyo/post/index.php",
 		"/C/xampp/htdocs/tokyo/_parts/footer.html",
-		"/C/xampp/htdocs/tokyo/_parts/side_nav.html",
 		"/C/xampp/htdocs/tokyo/_parts/nav_side.html",
 		"/C/xampp/htdocs/tokyo/top/index.php",
 		"/C/Users/Cheim/Desktop/jquery.imageloader.js",
@@ -194,7 +214,7 @@
 	],
 	"find":
 	{
-		"height": 42.0
+		"height": 32.0
 	},
 	"find_in_files":
 	{
@@ -209,6 +229,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"row",
+			"thumGallery",
+			"src",
 			"script",
 			"src",
 			"image-form",
@@ -245,8 +268,70 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "gallery/index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3393,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								550,
+								550
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 293.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/gallery.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 742,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								253,
+								253
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -285,7 +370,7 @@
 	{
 		"height": 0.0
 	},
-	"project": "TokyoAnimation",
+	"project": "TokyoAnimation.sublime-project",
 	"replace":
 	{
 		"height": 60.0
