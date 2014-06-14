@@ -4,6 +4,42 @@
 		"selected_items":
 		[
 			[
+				"g",
+				"gallery"
+			],
+			[
+				"get",
+				"getQuery"
+			],
+			[
+				"file",
+				"file-select"
+			],
+			[
+				"draw",
+				"drawImage"
+			],
+			[
+				"con",
+				"convertImage"
+			],
+			[
+				"ima",
+				"image-form"
+			],
+			[
+				"up",
+				"up-form"
+			],
+			[
+				"up-",
+				"up-image"
+			],
+			[
+				"u",
+				"upCanvas"
+			],
+			[
 				"fa",
 				"fadeSpeed"
 			],
@@ -90,9 +126,34 @@
 	},
 	"file_history":
 	[
+		"/C/xampp/htdocs/tokyo/js/gallery.js",
+		"/C/xampp/htdocs/tokyo/new/index.php",
+		"/C/xampp/htdocs/tokyo/near/index.php",
+		"/C/xampp/htdocs/tokyo/album/index.php",
+		"/C/xampp/htdocs/tokyo/setting/index.php",
+		"/C/xampp/htdocs/tokyo/gallery/index.php",
+		"/C/xampp/htdocs/tokyo/js/querystring.js",
+		"/C/xampp/htdocs/tokyo/index.php",
+		"/C/xampp/htdocs/tokyo/post/index.php",
+		"/C/xampp/htdocs/tokyo/_parts/footer.html",
+		"/C/xampp/htdocs/tokyo/_parts/side_nav.html",
+		"/C/xampp/htdocs/tokyo/_parts/nav_side.html",
+		"/C/xampp/htdocs/tokyo/top/index.php",
+		"/C/Users/Cheim/Desktop/jquery.imageloader.js",
+		"/C/xampp/htdocs/tokyo/js/jquery.gallery.js",
+		"/C/xampp/htdocs/tokyo/index.html",
+		"/C/xampp/htdocs/tokyo/album/index.html",
+		"/C/xampp/htdocs/tokyo/_parts/script.html",
+		"/C/xampp/htdocs/tokyo/_parts/header.html",
+		"/C/xampp/htdocs/tokyo/_parts/navigation.html",
+		"/C/xampp/htdocs/tokyo/api/post.php",
+		"/C/xampp/htdocs/tokyo/api/base.php",
+		"/C/xampp/htdocs/tokyo/api/layout.php",
+		"/C/xampp/htdocs/tokyo/api/top.php",
+		"/C/xampp/htdocs/tokyo/js/jquery.Jcrop.min.js",
+		"/C/xampp/htdocs/tokyo/api/template.php",
 		"/C/xampp/htdocs/tokyo/TokyoAnimation",
 		"/C/Users/Cheim/Desktop/tes.html",
-		"/C/Users/Cheim/Desktop/jquery.imageloader.js",
 		"/C/Users/Cheim/AppData/Roaming/Sublime Text 3/Packages/User/Default (Windows).sublime-keymap",
 		"/C/Users/Cheim/AppData/Roaming/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
 		"/C/temp/autome/member/js/logsv.js",
@@ -133,7 +194,7 @@
 	],
 	"find":
 	{
-		"height": 32.0
+		"height": 42.0
 	},
 	"find_in_files":
 	{
@@ -148,6 +209,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"script",
+			"src",
+			"image-form",
 			"4s",
 			"5",
 			",\n",
@@ -240,6 +304,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"C:\\xampp\\htdocs\\tokyo\\TokyoAnimation.sublime-workspace"
+			]
 		],
 		"width": 380.0
 	},

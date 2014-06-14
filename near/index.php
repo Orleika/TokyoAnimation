@@ -75,27 +75,11 @@
   </div>
 
   <?php include_once("../_parts/script.html"); ?>
-  <script src=""></script>
+  <script src="js/gallery.js"></script>
   <script>
   $(function () {
-    var getGallery = function (json) {
-      var i;
-      for(i in json) {
-        $('#gallery a').eq(i).attr({'href': json[i].Animation.Url});
-        $('#gallery img').eq(i).attr({'src': 'gallery/?id' + json[i].Id});
-      }
-    };
     $('#side-nav li').eq(1).attr({'class': 'active'});
-    $.ajax({
-      async: true,
-      url: '//tokyo-animation.azurewebsites.net/api/pictures/near',
-      type: 'GET',
-      dataType: 'json'
-    }).done(function (json) {
-      getGallery(json.Pictures);
-    }).fail(function () {
-    }).always(function () {
-    });
+    $('#gallery').thumGallery({'url': '//tokyo-animation.azurewebsites.net/api/pictures/near'});
   });
   </script>
 </body>
