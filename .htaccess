@@ -1,1 +1,7 @@
 Header append Access-Control-Allow-Origin: *
+Header append Origin: http://localhost/tokyo/post/
+SetEnvIfNoCase ORIGIN (.*) ORIGIN=$1
+Header always set Access-Control-Allow-Methods "POST, GET, PUT, OPTIONS, PATCH, DELETE"
+Header always set Access-Control-Allow-Origin "%{ORIGIN}e"
+Header always set Access-Control-Allow-Credentials "true"
+Header always set Access-Control-Allow-Headers "X-Accept-Charset,X-Accept,Content-Type"

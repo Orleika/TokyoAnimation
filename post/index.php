@@ -12,7 +12,7 @@
     <div id="image-form"><img id="up-image" src="img/no.png" alt="no image"></div>
     <div id="up-form">
       <input type="file" name="upimage" size="30">
-      <canvas id="up-canvas"></canvas>
+      <canvas id="up-canvas" hidden></canvas>
       <input id="up-submit" type="submit" value="submit">
     </div>
   </main>
@@ -56,13 +56,13 @@
         });
       };
 
-    $('input[type=file]').change(function() {
+    $('input[type=file]').change(function () {
       var file = $(this).prop('files')[0],
         reader = new FileReader();
       if (!file.type.match('image.*')) {
         return;
       }
-      reader.onload = function() {
+      reader.onload = function () {
         $('.jcrop-holder').remove();
         $('#up-image').unbind();
         $('#up-image').remove();
@@ -85,6 +85,7 @@
       fd.append('path', blob);
       fd.append('longitude', 0);
       fd.append('latitude', 0);
+
       $.ajax({
         async: true,
         url: '//tokyo-animation.azurewebsites.net/api/pictures',
