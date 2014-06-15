@@ -188,8 +188,6 @@
       fd.append('path', blob);
       fd.append('latitude', latitude);
       fd.append('longitude', longitude);
-      alert(latitude + ","+ longitude);
-/*
       $.ajax({
         async: true,
         url: '//tokyo-animation.azurewebsites.net/api/pictures',
@@ -203,7 +201,6 @@
         showModal('警告', '<p>アップロードに失敗しました。<br>しばらくたってから再びアップロードしてください。</p>');
       }).always(function () {
       });
-*/
     });
   });
   </script>
