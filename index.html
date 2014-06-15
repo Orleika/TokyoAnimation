@@ -1,11 +1,16 @@
-<?php
-ob_start();
-?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <?php include_once("_parts/head.html"); ?>
-  <title>TOKYO ANIMATION</title>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->  <title>TOKYO ANIMATION</title>
 </head>
 <body>
   <div id="bg-img" class="container">
@@ -99,13 +104,13 @@ ob_start();
 
         <!--フッター-->
         <footer class="color-white">
-          <?php include_once("_parts/footer.html"); ?></footer>
+                <p>&copy; Tokyo Animation 2014 TOKYO HACKATHON</p></footer>
       </div>
     </div>
   </div>
 
-  <?php include_once("_parts/script.html"); ?>
-  <script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="js/bootstrap.min.js"></script>  <script>
   $(function () {
     var type = Math.random() < 0.5 ? 0 : 1;
     if (type == 0) {
@@ -127,7 +132,3 @@ ob_start();
   });
   </script></body>
 </html>
-<?php
-file_put_contents('index.html', ob_get_contents());
-ob_end_clean();
-?>

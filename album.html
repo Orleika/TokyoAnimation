@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->  <title>アルバム | TOKYO ANIMATION</title>
+</head>
+<body>
+  <!--大見出し-->
+    <div class="jumbotron">
+    <form class="navbar-form navbar-right" role="form">
+      <button type="submit" class="btn btn-success">ログアウト</button>
+    </form>
+    <div class="container">
+      <h1><img src="./img/logo_500_white.png" width="500"></h1>
+      <p class="copy">未来にのこそう、私の東京</p>
+    </div>
+  </div>
+  <!--コンテンツ-->
+  <div class="container">
+    <div class="raw">
+      <!--ナビゲーション-->
+      <div class="col-md-4">
+                <ul id="side-nav" class="nav nav-pills nav-stacked" style="max-width: 300px;">
+          <li>
+            <a href="new.html">新着動画</a>
+          </li>
+          <li>
+            <a href="album.html">アルバム</a>
+          </li>
+          <li>
+            <a href="post.html">画像投稿</a>
+          </li>
+        </ul></div>
+
+      <!--サムネイルサンプル-->
+      <div id="gallery" class="col-md-8">
+                <div class="row">
+          <div class="col-md-4">
+            <a href="#" class="thumbnail caption">
+              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
+          </div>
+          <div class="col-md-4">
+            <a href="#" class="thumbnail caption">
+              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
+          </div>
+          <div class="col-md-4">
+            <a href="#" class="thumbnail caption">
+              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <a href="#" class="thumbnail caption">
+              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
+          </div>
+          <div class="col-md-4">
+            <a href="#" class="thumbnail caption">
+              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
+          </div>
+          <div class="col-md-4">
+            <a href="#" class="thumbnail caption">
+              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <a href="#" class="thumbnail caption">
+              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
+          </div>
+          <div class="col-md-4">
+            <a href="#" class="thumbnail caption">
+              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
+          </div>
+          <div class="col-md-4">
+            <a href="#" class="thumbnail caption">
+              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
+          </div>
+        </div></div>
+    </div>
+
+    <hr>
+
+    <!--フッター-->
+    <footer>
+            <p>&copy; Tokyo Animation 2014 TOKYO HACKATHON</p></footer>
+  </div>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="js/bootstrap.min.js"></script>  <script src="js/gallery.js"></script>
+  <script>
+  $(function () {
+    $('#side-nav li').eq(1).attr({'class': 'active'});
+    $('#gallery').thumGallery({'url': '//tokyo-animation.azurewebsites.net/api/pictures'});
+  });
+  </script>
+</body>
+</html>

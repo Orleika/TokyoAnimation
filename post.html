@@ -1,23 +1,44 @@
-<?php
-ob_start();
-?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <?php include_once("_parts/head.html"); ?>
-  <title>画像投稿 | 東京メモリ</title>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->  <title>画像投稿 | 東京メモリ</title>
 </head>
 <body>
   <!--大見出し-->
-  <?php include_once("_parts/header.html"); ?>
-
+    <div class="jumbotron">
+    <form class="navbar-form navbar-right" role="form">
+      <button type="submit" class="btn btn-success">ログアウト</button>
+    </form>
+    <div class="container">
+      <h1><img src="./img/logo_500_white.png" width="500"></h1>
+      <p class="copy">未来にのこそう、私の東京</p>
+    </div>
+  </div>
   <!--コンテンツ-->
   <div class="container">
     <div class="raw">
       <!--ナビゲーション-->
       <div class="col-md-4">
-        <?php include_once("_parts/side_nav.html"); ?>
-        <br>
+                <ul id="side-nav" class="nav nav-pills nav-stacked" style="max-width: 300px;">
+          <li>
+            <a href="new.html">新着動画</a>
+          </li>
+          <li>
+            <a href="album.html">アルバム</a>
+          </li>
+          <li>
+            <a href="post.html">画像投稿</a>
+          </li>
+        </ul>        <br>
 
         <!--アップロードの説明書-->
         <div class="panel panel-warning">
@@ -57,7 +78,7 @@ ob_start();
 
     <!--フッター-->
     <footer>
-      <?php include_once("_parts/footer.html"); ?></footer>
+            <p>&copy; Tokyo Animation 2014 TOKYO HACKATHON</p></footer>
 
     <!-- Modal -->
     <div id="modal-message" class="modal fade" role="dialog" tabindex="-1" aria-hidden="true">
@@ -73,8 +94,8 @@ ob_start();
     </div>
   </div>
 
-  <?php include_once("_parts/script.html"); ?>
-  <script src="http://maps.google.com/maps/api/js?key=AIzaSyDX03u-ysXWKncq5Yn5FRvij9eI08bCEkQ&sensor=false"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="js/bootstrap.min.js"></script>  <script src="http://maps.google.com/maps/api/js?key=AIzaSyDX03u-ysXWKncq5Yn5FRvij9eI08bCEkQ&sensor=false"></script>
   <script src="js/jquery.Jcrop.min.js"></script>
   <script>
   $(function (){
@@ -230,7 +251,3 @@ ob_start();
   </script>
 </body>
 </html>
-<?php
-file_put_contents('post.html', ob_get_contents());
-ob_end_clean();
-?>

@@ -1,3 +1,6 @@
+<?php
+ob_start();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -65,3 +68,7 @@
   </script>
 </body>
 </html>
+<?php
+file_put_contents('gallery.html', ob_get_contents());
+ob_end_clean();
+?>
