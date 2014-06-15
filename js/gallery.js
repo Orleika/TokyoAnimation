@@ -6,6 +6,10 @@
       url: ''
     }, options),
     $this = $(this),
+    getConvertText = function (text) {
+      var str = text.substr(0, 10);
+      return str;
+    },
     getGallery = function (json) {
       for(var n in json) {
         if (json[n].AnimationId) {
@@ -14,6 +18,7 @@
           $this.find('a').eq(n).attr({});
         }
         $this.find('img').eq(n).attr({'src': json[n].Url});
+        $this.find('img').eq(n).after('<p>' + getConvertText(json[n].CreateTime) + '</p>');
       }
     };
 

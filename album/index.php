@@ -19,59 +19,14 @@
 
       <!--サムネイルサンプル-->
       <div id="gallery" class="col-md-8">
-        <div class="row">
-          <div class="col-md-4">
-            <a href="#" class="thumbnail">
-              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-          </div>
-          <div class="col-md-4">
-            <a href="#" class="thumbnail">
-              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-          </div>
-          <div class="col-md-4">
-            <a href="#" class="thumbnail">
-              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4">
-            <a href="#" class="thumbnail">
-              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-          </div>
-          <div class="col-md-4">
-            <a href="#" class="thumbnail">
-              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-          </div>
-          <div class="col-md-4">
-            <a href="#" class="thumbnail">
-              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-md-4">
-            <a href="#" class="thumbnail">
-              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-          </div>
-          <div class="col-md-4">
-            <a href="#" class="thumbnail">
-              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-          </div>
-          <div class="col-md-4">
-            <a href="#" class="thumbnail">
-              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-          </div>
-        </div>
-      </div>
+        <?php include_once("../_parts/gallery.html"); ?></div>
     </div>
 
     <hr>
 
     <!--フッター-->
     <footer>
-      <?php include_once("../_parts/footer.html"); ?>
-    </footer>
+      <?php include_once("../_parts/footer.html"); ?></footer>
   </div>
 
   <?php include_once("../_parts/script.html"); ?>

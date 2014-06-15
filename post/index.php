@@ -22,6 +22,7 @@
       <div class="col-md-8">
         <div id="image-form">
           <img id="up-image" class="thumbnail" src="img/no.png" alt="no image"></div>
+        <div id="map"></div>
         <div id="up-form">
           <input type="file" name="upimage">
           <button type="button" id="up-submit" class="btn btn-primary">投稿</button>
@@ -52,17 +53,36 @@
   </div>
 
   <?php include_once("../_parts/script.html"); ?>
+  <script src="//maps.google.com/maps/api/js?key=AIzaSyDX03u-ysXWKncq5Yn5FRvij9eI08bCEkQ&sensor=false"></script>
   <script src="js/jquery.Jcrop.min.js"></script>
   <script>
   $(function (){
     var $upForm = $('#up-form'),
       $canvas = $('#up-canvas'),
-      x, y, w, h, blob,
+      x, y, w, h, blob, latitude, longitude,
       util = {
         stop: function(e) {
           e.preventDefault();
           e.stopPropagation();
         }
+      },
+      setMap = function () {
+        var latlng = new google.maps.LatLng(35.709984,139.810703);
+        var opts = {
+          zoom: 15,
+          center: latlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById('map'), opts);
+        var marker = new google.maps.Marker({
+          position: latlng,
+          draggable: true,
+          map: map,
+        });
+        google.maps.event.addListener(marker,'dragend', function(event) {
+          latitude = marker.getPosition().lat();
+          longitude = marker.getPosition().lng();
+        })
       },
       showModal = function (title, msg) {
         $('#modal-message .modal-title').text(title);
@@ -142,6 +162,8 @@
       referImage(file);
     });
 
+    setMap();
+
     $('#up-submit').click(function () {
       var fd = new FormData();
       if (!$('input[type=file]').prop('files')[0]) {
@@ -156,13 +178,18 @@
         showModal('警告', '<p>アップロードする画像は正方形で範囲選択してください。</p>');
         return false;
       }
+      if (!latitude || !longitude) {
+        showModal('警告', '<p>アップロードする画像の位置情報をマーカーで指定してください。</p>');
+        return false;
+      }
       $canvas.attr({width: w, height: h});
       drawCanvas();
       convertImage();
       fd.append('path', blob);
-      fd.append('longitude', 0);
-      fd.append('latitude', 0);
-
+      fd.append('latitude', latitude);
+      fd.append('longitude', longitude);
+      alert(latitude + ","+ longitude);
+/*
       $.ajax({
         async: true,
         url: '//tokyo-animation.azurewebsites.net/api/pictures',
@@ -176,6 +203,7 @@
         showModal('警告', '<p>アップロードに失敗しました。<br>しばらくたってから再びアップロードしてください。</p>');
       }).always(function () {
       });
+*/
     });
   });
   </script>

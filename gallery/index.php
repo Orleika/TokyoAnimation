@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <?php include_once("../_parts/head.html"); ?>
-  <title>設定 | TOKYO ANIMATION</title>
+  <title>ギャラリー | TOKYO ANIMATION</title>
 </head>
 <body>
   <!--固定型ヘッダー-->
@@ -22,58 +22,12 @@
         <div id="gif-anime" class="row">
           <div class="col-md-6 col-md-offset-3">
             <a href="#" class="thumbnail">
-              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample">
-            </a>
+              <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
           </div>
         </div>
-
         <!--サムネイル-->
         <div id="gallery">
-          <div class="row">
-            <div class="col-md-4">
-              <a href="#" class="thumbnail">
-                <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-            </div>
-            <div class="col-md-4">
-              <a href="#" class="thumbnail">
-                <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-            </div>
-            <div class="col-md-4">
-              <a href="#" class="thumbnail">
-                <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4">
-              <a href="#" class="thumbnail">
-                <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-            </div>
-            <div class="col-md-4">
-              <a href="#" class="thumbnail">
-                <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-            </div>
-            <div class="col-md-4">
-              <a href="#" class="thumbnail">
-                <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4">
-              <a href="#" class="thumbnail">
-                <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-            </div>
-            <div class="col-md-4">
-              <a href="#" class="thumbnail">
-                <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-            </div>
-            <div class="col-md-4">
-              <a href="#" class="thumbnail">
-                <img src="./img/thumbnail-sample.png" alt="thumbnail-sample"></a>
-            </div>
-          </div>
-        </div>
+          <?php include_once("../_parts/gallery.html"); ?></div>
       </div>
     </div>
 
