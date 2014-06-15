@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <?php include_once("../_parts/head.html"); ?>
-  <title>トップページ | TOKYO ANIMATION</title>
+  <title>新着動画 | TOKYO ANIMATION</title>
 </head>
 <body>
   <!--固定型ヘッダー-->
@@ -34,7 +34,7 @@
   <script>
   $(function () {
     $('#side-nav li').eq(0).attr({'class': 'active'});
-    $('#gallery').thumGallery({'url': '//tokyo-animation.azurewebsites.net/api/pictures/new'});
+    $('#gallery').thumGallery({'url': '//tokyo-animation.azurewebsites.net/api/animations', 'type': 'gif'});
   });
   </script>
 </body>

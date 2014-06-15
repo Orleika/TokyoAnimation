@@ -2,7 +2,6 @@
 <html lang="ja">
 <head>
   <?php include_once("../_parts/head.html"); ?>
-  <link rel="stylesheet" href="css/jquery.Jcrop.min.css">
   <title>投稿ページ | TOKYO ANIMATION</title>
 </head>
 <body>
@@ -140,7 +139,7 @@
         });
       };
 
-    $('#side-nav li').eq(3).attr({'class': 'active'});
+    $('#side-nav li').eq(2).attr({'class': 'active'});
 
     $('#up-image').click(function () {
       $('input[type=file]').click();
@@ -182,6 +181,7 @@
         showModal('警告', '<p>アップロードする画像の位置情報をマーカーで指定してください。</p>');
         return false;
       }
+      $('#up-submit').attr('disabled', true);
       $canvas.attr({width: w, height: h});
       drawCanvas();
       convertImage();
@@ -200,6 +200,8 @@
       }).fail(function () {
         showModal('警告', '<p>アップロードに失敗しました。<br>しばらくたってから再びアップロードしてください。</p>');
       }).always(function () {
+        $('#up-submit').attr('disabled', false);
+        $('#up-submit').removeAttr('disabled');
       });
     });
   });

@@ -3,22 +3,30 @@
 
   $.fn.thumGallery = function (options) {
     var settings = $.extend({
-      url: ''
+      url: '',
+      type: 'thumb'
     }, options),
     $this = $(this),
     getConvertText = function (text) {
       var str = text.substr(0, 10);
       return str;
     },
-    getGallery = function (json) {
+    getThumb = function (json) {
       for(var n in json) {
         if (json[n].AnimationId) {
           $this.find('a').eq(n).attr({'href': 'gallery/?id=' + json[n].AnimationId});
         } else {
-          $this.find('a').eq(n).attr({});
+          $this.find('a').eq(n).attr({'href': 'javascript:void(0)'});
         }
         $this.find('img').eq(n).attr({'src': json[n].Url});
-        $this.find('img').eq(n).after('<p>' + getConvertText(json[n].CreateTime) + '</p>');
+        $this.find('img').eq(n).after('<span>' + getConvertText(json[n].CreateTime) + '</span>');
+      }
+    },
+    getGif = function (json) {
+      for(var n in json) {
+        $this.find('a').eq(n).attr({'href': 'gallery/?id=' + json[n].Id});
+        $this.find('img').eq(n).attr({'src': json[n].Url});
+        $this.find('img').eq(n).after('<span>' + getConvertText(json[n].CreateTime) + '</span>');
       }
     };
 
@@ -28,7 +36,11 @@
       type: 'GET',
       dataType: 'json'
     }).done(function (json) {
-      getGallery(json.Pictures);
+      if (settings.type === 'thumb') {
+        getThumb(json.Pictures);
+      } else if(settings.type === 'gif') {
+        getGif(json.Animations);
+      }
     }).fail(function () {
     }).always(function () {
     });

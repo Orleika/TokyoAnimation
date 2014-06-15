@@ -52,8 +52,6 @@
         $('#gif-anime img').attr({'src': json.Url, 'alt': 'gif animation'});
       };
 
-    $('#gallery').thumGallery({'url': url});
-
     $.ajax({
       async: true,
       url: url,
@@ -63,6 +61,7 @@
       getGif(json);
     }).fail(function () {
     }).always(function () {
+      $('#gallery').thumGallery({'url': url});
     });
   });
   </script>

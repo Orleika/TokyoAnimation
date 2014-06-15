@@ -33,7 +33,7 @@
   <script src="js/gallery.js"></script>
   <script>
   $(function () {
-    $('#side-nav li').eq(2).attr({'class': 'active'});
+    $('#side-nav li').eq(1).attr({'class': 'active'});
     $('#gallery').thumGallery({'url': '//tokyo-animation.azurewebsites.net/api/pictures'});
   });
   </script>
