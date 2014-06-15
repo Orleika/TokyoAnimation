@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"log",
+				"loginForm"
+			],
+			[
+				"regist",
+				"registForm"
+			],
+			[
+				"reg",
+				"regist-change"
+			],
+			[
+				"set",
+				"setMap"
+			],
+			[
 				"g",
 				"gallery"
 			],
@@ -71,24 +87,8 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "gallery/index.php",
-			"settings":
-			{
-				"buffer_size": 3393,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "js/gallery.js",
-			"settings":
-			{
-				"buffer_size": 742,
-				"line_ending": "Windows"
-			}
-		}
 	],
-	"build_system": "",
+	"build_system": "Packages/LESS-build/LESS.sublime-build",
 	"command_palette":
 	{
 		"height": 64.0,
@@ -123,7 +123,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 498.0
+		"width": 410.0
 	},
 	"console":
 	{
@@ -146,17 +146,27 @@
 	},
 	"file_history":
 	[
+		"/C/xampp/htdocs/tokyo/_parts/head.html",
+		"/C/xampp/htdocs/tokyo/_parts/footer.html",
+		"/C/xampp/htdocs/tokyo/index.php",
+		"/C/xampp/htdocs/tokyo/less/master.less",
+		"/C/xampp/htdocs/tokyo/_parts/head_nav.html",
+		"/C/xampp/htdocs/tokyo/gallery.php",
+		"/C/xampp/htdocs/tokyo/album.php",
+		"/C/xampp/htdocs/tokyo/new.php",
+		"/C/xampp/htdocs/tokyo/post.php",
 		"/C/xampp/htdocs/tokyo/_parts/side_nav.html",
+		"/C/xampp/htdocs/tokyo/_parts/header.html",
+		"/C/xampp/htdocs/tokyo/js/gallery.js",
+		"/C/xampp/htdocs/tokyo/post.html",
+		"/C/xampp/htdocs/tokyo/post/index.php",
 		"/C/xampp/htdocs/tokyo/album/index.php",
 		"/C/xampp/htdocs/tokyo/near/index.php",
-		"/C/xampp/htdocs/tokyo/js/gallery.js",
 		"/C/xampp/htdocs/tokyo/new/index.php",
-		"/C/xampp/htdocs/tokyo/setting/index.php",
 		"/C/xampp/htdocs/tokyo/gallery/index.php",
+		"/C/xampp/htdocs/tokyo/_parts/gallery.html",
+		"/C/xampp/htdocs/tokyo/setting/index.php",
 		"/C/xampp/htdocs/tokyo/js/querystring.js",
-		"/C/xampp/htdocs/tokyo/index.php",
-		"/C/xampp/htdocs/tokyo/post/index.php",
-		"/C/xampp/htdocs/tokyo/_parts/footer.html",
 		"/C/xampp/htdocs/tokyo/_parts/nav_side.html",
 		"/C/xampp/htdocs/tokyo/top/index.php",
 		"/C/Users/Cheim/Desktop/jquery.imageloader.js",
@@ -164,7 +174,6 @@
 		"/C/xampp/htdocs/tokyo/index.html",
 		"/C/xampp/htdocs/tokyo/album/index.html",
 		"/C/xampp/htdocs/tokyo/_parts/script.html",
-		"/C/xampp/htdocs/tokyo/_parts/header.html",
 		"/C/xampp/htdocs/tokyo/_parts/navigation.html",
 		"/C/xampp/htdocs/tokyo/api/post.php",
 		"/C/xampp/htdocs/tokyo/api/base.php",
@@ -229,6 +238,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			";\n",
+			"header",
+			"input",
+			"gallery",
+			"div",
 			"row",
 			"thumGallery",
 			"src",
@@ -268,70 +282,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "gallery/index.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3393,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								550,
-								550
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 293.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "js/gallery.js",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 742,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								253,
-								253
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -366,6 +318,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 355.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0

@@ -2,6 +2,45 @@
 @main-color: #ffd300;
 @sub-color: #212f49;
 @accent-color: #fff;
+@shadow-color: #ddd;
+
+.color-white {
+    color: @accent-color;
+}
+.color-main {
+    color: @main-color;
+}
+
+.color-sub {
+    color: @sub-color;
+}
+.color-base {
+    color: @base-color;
+}
+
+.shadow-white {
+    text-shadow:
+    -1px -1px @shadow-color,
+    1px -1px @shadow-color,
+    -1px 1px @shadow-color,
+    1px 1px @shadow-color;
+}
+
+#id-form {
+    margin: 40px 0;    
+}
+
+#registForm {
+    display:none;
+}
+
+#socialLoginList {
+    display: inline-block;
+}
+
+#top-title {
+    background: none;   
+}
 
 .jumbotron {
       padding: 30px;
@@ -38,3 +77,44 @@ input[type=file] {
     width: 500px;
     height: 300px;
 }
+
+.top-new-image {
+    background: url(../img/Tokyo_memori5.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.top-old-image {
+    background: url(../img/Tokyo_memori5_old.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h2{
+    border-bottom: 3px double #ffd300;
+    margin: 0px 0px 10px 0px;
+  }
+  p.copy{
+    font-size: 1.7em;
+    color: #ffffff;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    text-shadow: 1px 1px 2px #000;
+  }
+  div.jumbotron{
+    background: url("../img/header_bg.jpg");
+    width: 100%;
+    height: 245px;
+    background-size:cover;
+  }
+  ol.manual{
+    margin: 0px 0px 0px -20px;
+  }
+  ol.manual li{
+    border-bottom: 1px solid #efefef;
+    padding: 0px 0px 5px 0px;
+    margin: 0px 0px 10px 0px;
+  }

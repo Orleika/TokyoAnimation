@@ -14,7 +14,7 @@
     getThumb = function (json) {
       for(var n in json) {
         if (json[n].AnimationId) {
-          $this.find('a').eq(n).attr({'href': 'gallery/?id=' + json[n].AnimationId});
+          $this.find('a').eq(n).attr({'href': 'gallery.php?id=' + json[n].AnimationId});
         } else {
           $this.find('a').eq(n).attr({'href': 'javascript:void(0)'});
         }
@@ -24,7 +24,7 @@
     },
     getGif = function (json) {
       for(var n in json) {
-        $this.find('a').eq(n).attr({'href': 'gallery/?id=' + json[n].Id});
+        $this.find('a').eq(n).attr({'href': 'gallery.php?id=' + json[n].Id});
         $this.find('img').eq(n).attr({'src': json[n].Url});
         $this.find('img').eq(n).after('<span>' + getConvertText(json[n].CreateTime) + '</span>');
       }

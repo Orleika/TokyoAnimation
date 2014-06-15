@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <?php include_once("../_parts/head.html"); ?>
-  <title>投稿ページ | TOKYO ANIMATION</title>
+  <?php include_once("_parts/head.html"); ?>
+  <title>投稿ページ | 東京メモリ</title>
 </head>
 <body>
-  <!--固定型ヘッダー-->
-  <?php include_once("../_parts/head_nav.html"); ?>
-
   <!--大見出し-->
-  <?php include_once("../_parts/header.html"); ?>
+  <?php include_once("_parts/header.html"); ?>
 
   <!--コンテンツ-->
   <div class="container">
     <div class="raw">
       <!--ナビゲーション-->
-      <?php include_once("../_parts/side_nav.html"); ?>
+      <div class="col-md-4">
+        <?php include_once("_parts/side_nav.html"); ?>
+        <br>
+
+        <!--アップロードの説明書-->
+        <div class="panel panel-warning">
+          <div class="panel-heading">
+            <h3 class="panel-title">投稿の手順</h3>
+          </div>
+          <div class="panel-body">
+            <ol class="manual">
+              <li>水色のエリアに画像をドラッグ アンド ドロップして下さい。</li>
+              <li>画像を正方形にリサイズして下さい。</li>
+              <li>地図を操作し、撮影した場所にピンを移動します。</li>
+              <li>投稿ボタンをクリックします。</li>
+              <li>GIF画像が作成されます。</li>
+            </ol>
+          </div>
+        </div>
+      </div>
 
       <!--メイン-->
       <div class="col-md-8">
+        <h2>画像をアップロードする</h2>
         <div id="image-form">
           <img id="up-image" class="thumbnail" src="img/no.png" alt="no image"></div>
+        <hr>
+        <h2>撮影場所を選択する</h2>
         <div id="map"></div>
+        <hr>
         <div id="up-form">
           <input type="file" name="upimage">
-          <button type="button" id="up-submit" class="btn btn-primary">投稿</button>
+          <button type="button" id="up-submit" class="btn btn-warning btn-lg btn-block">投稿</button>
           <canvas id="up-canvas" hidden></canvas>
         </div>
       </div>
@@ -34,8 +54,7 @@
 
     <!--フッター-->
     <footer>
-      <?php include_once("../_parts/footer.html"); ?>
-    </footer>
+      <?php include_once("_parts/footer.html"); ?></footer>
 
     <!-- Modal -->
     <div id="modal-message" class="modal fade" role="dialog" tabindex="-1" aria-hidden="true">
@@ -51,8 +70,8 @@
     </div>
   </div>
 
-  <?php include_once("../_parts/script.html"); ?>
-  <script src="//maps.google.com/maps/api/js?key=AIzaSyDX03u-ysXWKncq5Yn5FRvij9eI08bCEkQ&sensor=false"></script>
+  <?php include_once("_parts/script.html"); ?>
+  <script src="http://maps.google.com/maps/api/js?key=AIzaSyDX03u-ysXWKncq5Yn5FRvij9eI08bCEkQ&sensor=false"></script>
   <script src="js/jquery.Jcrop.min.js"></script>
   <script>
   $(function (){
