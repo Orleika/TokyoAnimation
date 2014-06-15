@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <?php include_once("_parts/head.html"); ?>
-  <title>投稿ページ | 東京メモリ</title>
+  <title>画像投稿 | 東京メモリ</title>
 </head>
 <body>
   <!--大見出し-->
@@ -85,7 +85,7 @@
         }
       },
       setMap = function () {
-        var latlng = new google.maps.LatLng(35.709984,139.810703);
+        var latlng = new google.maps.LatLng(35.671573, 139.721587);
         var opts = {
           zoom: 15,
           center: latlng,

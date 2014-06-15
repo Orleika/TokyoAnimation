@@ -99,9 +99,10 @@
           <?php include_once("_parts/footer.html"); ?></footer>
       </div>
     </div>
+  </div>
 
-    <?php include_once("_parts/script.html"); ?>
-    <script>
+  <?php include_once("_parts/script.html"); ?>
+  <script>
   $(function () {
     var type = Math.random() < 0.5 ? 0 : 1;
     if (type == 0) {
@@ -119,6 +120,7 @@
       $('#loginForm').css('display', 'block');
       $('#registForm').css('display', 'none');
     });
+
   });
   </script></body>
-  </html>
+</html>
