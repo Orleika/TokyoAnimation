@@ -161,8 +161,6 @@ ob_start();
         });
       };
 
-    $('#side-nav li').eq(2).attr({'class': 'active'});
-
     $('#up-image').click(function () {
       $('input[type=file]').click();
     });
