@@ -1,11 +1,11 @@
         <ul id="side-nav" class="nav nav-pills nav-stacked" style="max-width: 300px;">
-          <li>
+          <li <?php strpos($_SERVER["SCRIPT_NAME"], "new") !== FALSE ? echo "class=\"active\"" : ;?>>
             <a href="new.html">新着動画</a>
           </li>
-          <li>
+          <li <?php strpos($_SERVER["SCRIPT_NAME"], "album") !== FALSE ? echo "class=\"active\"" : ;?>>
             <a href="album.html">アルバム</a>
           </li>
-          <li>
+          <li <?php strpos($_SERVER["SCRIPT_NAME"], "post") !== FALSE ? echo "class=\"active\"" : ;?>>
             <a href="post.html">画像投稿</a>
           </li>
         </ul>
