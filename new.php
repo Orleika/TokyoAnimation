@@ -34,7 +34,6 @@ ob_start();
   <script src="js/gallery.js"></script>
   <script>
   $(function () {
-    $('#side-nav li').eq(0).attr({'class': 'active'});
     $('#gallery').thumGallery({'url': '//tokyo-animation.azurewebsites.net/api/animations', 'type': 'gif'});
   });
   </script>
